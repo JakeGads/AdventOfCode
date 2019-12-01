@@ -3,6 +3,7 @@ def hand_off(num)
     number = num.to_f / 3 # forces float (regardless of current type)
     number = number.floor # floors the number
     number -= 2 # subtracts 2
+    return number
 end
 
 def calc_difference(weight)
@@ -34,3 +35,4 @@ if __FILE__ == $0 # checks if this is the executing file
     end
 
     puts sum
+end
