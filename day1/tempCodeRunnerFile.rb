@@ -1,0 +1,2 @@
+puts pulse
+# puts shift
