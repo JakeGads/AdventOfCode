@@ -29,6 +29,23 @@ def part2():
                 else:
                     freq_list.append(freq) # appends if if doesn't reloops (the entire file if needed)
 
+def part2_r():
+    shifts = []
+    with open('day1.txt', 'r') as file:
+        for line in file:
+            shifts.append(int(line))
     
+    current_freq = 0
+    all_freqs = []
+
+    while True:
+        for i in shifts:
+            current_freq += i
+            if current_freq in all_freqs:
+                return current_freq
+            else:
+                all_freqs.append(current_freq)
+
 if __name__ == "__main__":
-    print(f"Part 1: {part1()}\nPart 2: {part2()}") # print statments
+    print(f"Part 1: {part1()}") # print statments
+    print(f"Part 2: {part2_r()}")
