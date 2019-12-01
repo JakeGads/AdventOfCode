@@ -22,6 +22,7 @@ def part2():
     freq_list = [freq] # append it to the master list
     while True: # allows for the recursive nature
         with open('day1.txt', 'r') as file: # opens up my files (reopens when needed)
+            print(len(freq_list))
             for line in file: # reads each line
                 freq += int(line) # adds to freq
                 if freq in freq_list: # checks if its present
@@ -40,6 +41,7 @@ def part2_r():
 
     while True:
         for i in shifts:
+            print(len(all_freqs))
             current_freq += i
             if current_freq in all_freqs:
                 return current_freq
